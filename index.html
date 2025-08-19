@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Star Wars App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="header">
+    <!-- заголовок собираем из трёх слов, чтобы подсветка и переносы были красивее -->
+    <h1 class="logo">
+      <span class="sw" data-text="Star">Star</span>
+      <span class="sw" data-text="Wars">Wars</span>
+      <span class="sw" data-text="App">App</span>
+      <span class="emoji">💫</span>
+    </h1>
+
+    <!-- навигация по разделам -->
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab" data-page="films">Films</button>
+      <button class="tab" data-page="people">People</button>
+      <button class="tab" data-page="planets">Planets</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- отдельная обёртка, чтобы поиск не «врезался» в сетку -->
+    <div class="search-wrap">
+      <input id="search" class="search" type="text" placeholder="Search..." aria-label="Search by name or title" />
+    </div>
+
+    <!-- сюда рендерятся карточки -->
+    <ul id="list" class="grid"></ul>
+  </main>
+
+  <footer class="footer">
+    Data from <a href="https://swapi.tech" target="_blank" rel="noopener noreferrer">swapi.tech</a>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
