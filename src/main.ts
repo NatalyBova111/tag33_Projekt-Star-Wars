@@ -111,7 +111,7 @@ listEl!.addEventListener("click", async (ev) => {
     const json = await res.json();
     const p = json.result?.properties ?? {};
 
-    // Короткая сводка — подправь поля, если хочешь другой набор
+    // Короткая сводка 
     sub.textContent =
       type === "people"
         ? formatPerson(p)
